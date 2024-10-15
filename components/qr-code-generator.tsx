@@ -24,14 +24,13 @@ import {
 import { GradientPicker } from "@/components/gradient-picker";
 import QRCodeCard from "@/components/qr-code-card";
 import { track } from "@vercel/analytics";
-
 const formSchema = z.object({
-  networkName: z.string().min(1, "Network name is required"),
-  password: z.string().min(8, "Password must be at least 8 characters"),
+  networkName: z.string().min(1, "네트워크 이름이 필요합니다"),
+  password: z.string().min(8, "비밀번호는 최소 8자 이상이어야 합니다"),
   securityType: z.enum(["WPA", "WEP", "None"]),
   backgroundColor: z.string().default("#FFFFFF"),
-  label: z.string().default("WiFi QR Code"),
-  brandName: z.string().min(1, "Brand name is required"),
+  label: z.string().default("WiFi QR 코드"),
+  brandName: z.string().min(1, "브랜드 이름을 입력해 주세요."),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -46,7 +45,7 @@ export default function QRCodeGenerator() {
       password: "",
       securityType: "WPA",
       backgroundColor: "#FFFFFF",
-      label: "WiFi QR Code",
+      label: "WIFI QR CODE",
       brandName: "",
     },
   });

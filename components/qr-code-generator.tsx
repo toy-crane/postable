@@ -69,7 +69,7 @@ export default function QRCodeGenerator() {
             name="brandName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Brand Name</FormLabel>
+                <FormLabel>브랜드 이름</FormLabel>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
@@ -82,7 +82,7 @@ export default function QRCodeGenerator() {
             name="label"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Label</FormLabel>
+                <FormLabel>레이블</FormLabel>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
@@ -96,7 +96,7 @@ export default function QRCodeGenerator() {
             name="networkName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Network Name</FormLabel>
+                <FormLabel>네트워크 이름</FormLabel>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
@@ -109,7 +109,7 @@ export default function QRCodeGenerator() {
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Password</FormLabel>
+                <FormLabel>비밀번호</FormLabel>
                 <FormControl>
                   <Input type="password" {...field} />
                 </FormControl>
@@ -122,20 +122,20 @@ export default function QRCodeGenerator() {
             name="securityType"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Security Type</FormLabel>
+                <FormLabel>보안 유형</FormLabel>
                 <Select
                   onValueChange={field.onChange}
                   defaultValue={field.value}
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select security type" />
+                      <SelectValue placeholder="보안 유형 선택" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
                     <SelectItem value="WPA">WPA/WPA2</SelectItem>
                     <SelectItem value="WEP">WEP</SelectItem>
-                    <SelectItem value="None">None</SelectItem>
+                    <SelectItem value="None">없음</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />
@@ -147,7 +147,7 @@ export default function QRCodeGenerator() {
             name="backgroundColor"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Background Color</FormLabel>
+                <FormLabel>배경색</FormLabel>
                 <FormControl>
                   <GradientPicker
                     background={field.value}
@@ -160,7 +160,7 @@ export default function QRCodeGenerator() {
             )}
           />
 
-          <Button type="submit">Generate QR Code</Button>
+          <Button type="submit">QR 코드 생성</Button>
         </form>
       </Form>
       <div>
@@ -168,7 +168,7 @@ export default function QRCodeGenerator() {
           <>
             <QRCodeCard data={qrCodeData} />
             <Button onClick={handleDownload} className="mt-4">
-              Download Image
+              이미지 다운로드
             </Button>
           </>
         )}

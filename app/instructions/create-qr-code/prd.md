@@ -26,22 +26,24 @@ The primary goal of this project is to develop a QR code generator specifically 
 
 ## 2.1 Global Layout and Components
 
-### 2.1.0 Root Layout Component
+### 2.1.1 Root Layout Component
 
 The root layout component provides a consistent structure for all pages:
 
 - Ensures full viewport height with vertical content stacking
 - Contains a header and main content area
 
-### 2.1.1 Header Component
+### 2.1.2 Header Component
 
-The application features a sticky header that remains at the top of the page as users scroll. It includes a plain text logo, "postable", aligned to the left, and a "Feedback" link on the right. The header content is contained within an `mx-auto` container to ensure proper centering and responsive behavior.
+The application features a sticky header that remains at the top of the page as users scroll.
+It includes a plain text logo, "postable", aligned to the left, and a "Feedback" link on the right.
+To center the header and ensure it’s responsive, the content is wrapped in a container with the mx-auto class.
 
-### 2.1.2 Footer Component
+### 2.1.3 Footer Component
 
 There is currently no footer component implemented in the application. All essential navigation and information are provided through the header and main content areas.
 
-### 2.1.3 Navigation Component
+### 2.1.4 Navigation Component
 
 Navigation is primarily handled through page links and buttons within the application pages. There is no separate navigation component; instead, users are guided through the workflow via interactive elements on each page.
 

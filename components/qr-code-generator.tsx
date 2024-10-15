@@ -163,11 +163,14 @@ export default function QRCodeGenerator() {
           <Button type="submit">QR 코드 생성</Button>
         </form>
       </Form>
-      <div>
+      <div className="flex flex-col gap-4">
         {qrCodeData && (
           <>
             <QRCodeCard data={qrCodeData} />
-            <Button onClick={handleDownload} className="mt-4">
+            <Button
+              onClick={handleDownload}
+              className="mt-4 w-full max-w-64 self-center"
+            >
               이미지 다운로드
             </Button>
           </>

@@ -159,7 +159,6 @@ export default function QRCodeGenerator() {
               </FormItem>
             )}
           />
-
           <Button type="submit">QR 코드 생성</Button>
         </form>
       </Form>
